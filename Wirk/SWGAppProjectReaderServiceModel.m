@@ -19,7 +19,7 @@
  */
 + (JSONKeyMapper *)keyMapper
 {
-  return [[JSONKeyMapper alloc] initWithDictionary:@{ @"AppName": @"appName", @"AppProjectState": @"appProjectState", @"CreationDate": @"creationDate", @"Credit": @"credit", @"HasInstruction": @"hasInstruction", @"HasQuestionOptions": @"hasQuestionOptions", @"IdApp": @"idApp", @"IdAppProject": @"idAppProject", @"IdQuality": @"idQuality", @"Instruction": @"instruction", @"NbTaskClosed": @"nbTaskClosed", @"NbTotalTask": @"nbTotalTask", @"Qualities": @"qualities", @"QualityName": @"qualityName", @"QuestionOptions": @"questionOptions", @"Title": @"title", @"TitleQuestionOptions": @"titleQuestionOptions", @"UrlNotification": @"urlNotification" }];
+  return [[JSONKeyMapper alloc] initWithDictionary:@{ @"AppName": @"appName", @"AppProjectState": @"appProjectState", @"CreationDate": @"creationDate", @"Credit": @"credit", @"IdApp": @"idApp", @"IdAppProject": @"idAppProject", @"IdQuality": @"idQuality", @"Instruction": @"instruction", @"NbTaskClosed": @"nbTaskClosed", @"NbTotalTask": @"nbTotalTask", @"QualityName": @"qualityName", @"QuestionOptions": @"questionOptions", @"Title": @"title", @"UrlNotification": @"urlNotification" }];
 }
 
 /**
@@ -29,7 +29,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName
 {
-  NSArray *optionalProperties = @[@"appProjectState", @"creationDate", @"credit", @"hasInstruction", @"hasQuestionOptions", @"idApp", @"idAppProject", @"idQuality", @"instruction", @"nbTaskClosed", @"nbTotalTask", @"qualities", @"qualityName", @"questionOptions", @"title", @"titleQuestionOptions", @"urlNotification"];
+  NSArray *optionalProperties = @[@"appProjectState", @"creationDate", @"credit", @"idApp", @"idAppProject", @"idQuality", @"instruction", @"nbTaskClosed", @"nbTotalTask", @"qualityName", @"questionOptions", @"title", @"urlNotification"];
 
   if ([optionalProperties containsObject:propertyName]) {
     return YES;

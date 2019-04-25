@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
     s.summary          = "Wirk"
     s.description      = <<-DESC
-                         API for api.wirk.io
+                         &lt;p&gt;API for api.wirk.io&lt;/p&gt;
                          DESC
 
     s.platform     = :ios, '7.0'

@@ -7,7 +7,6 @@
  * Do not edit the class manually.
  */
 
-#import "SWGQualityReaderServiceModel.h"
 
 
 @protocol SWGAppProjectReaderServiceModel
@@ -18,15 +17,11 @@
 
 @property(nonatomic) NSString* appName;
 
-@property(nonatomic) NSNumber* appProjectState;
+@property(nonatomic) NSString* appProjectState;
 
 @property(nonatomic) NSDate* creationDate;
 
 @property(nonatomic) NSNumber* credit;
-
-@property(nonatomic) NSNumber* hasInstruction;
-
-@property(nonatomic) NSNumber* hasQuestionOptions;
 
 @property(nonatomic) NSNumber* idApp;
 
@@ -40,15 +35,11 @@
 
 @property(nonatomic) NSNumber* nbTotalTask;
 
-@property(nonatomic) NSArray<SWGQualityReaderServiceModel>* qualities;
-
 @property(nonatomic) NSString* qualityName;
 
 @property(nonatomic) NSArray* /* NSString */ questionOptions;
 
 @property(nonatomic) NSString* title;
-
-@property(nonatomic) NSString* titleQuestionOptions;
 
 @property(nonatomic) NSString* urlNotification;
 

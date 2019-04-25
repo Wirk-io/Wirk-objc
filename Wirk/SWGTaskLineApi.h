@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import "SWGTaskLineWriterServiceModel.h"
 #import "SWGTaskLineReaderServiceModel.h"
 #import "SWGObject.h"
 #import "SWGApiClient.h"
@@ -20,21 +19,6 @@
 -(unsigned long) requestQueueSize;
 +(SWGTaskLineApi*) apiWithHeader:(NSString*)headerValue key:(NSString*)key;
 +(SWGTaskLineApi*) sharedAPI;
-///
-///
-/// 
-/// Post taskline
-///
-/// @param taskLineWriterServiceModel Taskline description
-/// 
-///
-/// @return SWGTaskLineReaderServiceModel*
--(NSNumber*) postWithCompletionBlock :(SWGTaskLineWriterServiceModel*) taskLineWriterServiceModel 
-    
-    completionHandler: (void (^)(SWGTaskLineReaderServiceModel* output, NSError* error))completionBlock;
-    
-
-
 ///
 ///
 /// 

@@ -1,6 +1,5 @@
 #import "SWGTaskLineApi.h"
 #import "SWGQueryParamCollection.h"
-#import "SWGTaskLineWriterServiceModel.h"
 #import "SWGTaskLineReaderServiceModel.h"
 
 
@@ -69,89 +68,6 @@ static SWGTaskLineApi* singletonAPI = nil;
 }
 
 #pragma mark - Api Methods
-
-///
-/// 
-/// Post taskline
-///  @param taskLineWriterServiceModel Taskline description
-///
-///  @returns SWGTaskLineReaderServiceModel*
-///
--(NSNumber*) postWithCompletionBlock: (SWGTaskLineWriterServiceModel*) taskLineWriterServiceModel
-        
-        completionHandler: (void (^)(SWGTaskLineReaderServiceModel* output, NSError* error))completionBlock { 
-        
-
-    
-    // verify the required parameter 'taskLineWriterServiceModel' is set
-    if (taskLineWriterServiceModel == nil) {
-        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `taskLineWriterServiceModel` when calling `post`"];
-    }
-    
-
-    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/TaskLine"];
-
-    // remove format in URL if needed
-    if ([resourcePath rangeOfString:@".{format}"].location != NSNotFound) {
-        [resourcePath replaceCharactersInRange: [resourcePath rangeOfString:@".{format}"] withString:@".json"];
-    }
-
-    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
-    
-
-    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    
-    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
-
-    
-
-    // HTTP header `Accept`
-    headerParams[@"Accept"] = [SWGApiClient selectHeaderAccept:@[@"application/json"]];
-    if ([headerParams[@"Accept"] length] == 0) {
-        [headerParams removeObjectForKey:@"Accept"];
-    }
-
-    // response content type
-    NSString *responseContentType;
-    if ([headerParams objectForKey:@"Accept"]) {
-        responseContentType = [headerParams[@"Accept"] componentsSeparatedByString:@", "][0];
-    }
-    else {
-        responseContentType = @"";
-    }
-
-    // request content type
-    NSString *requestContentType = [SWGApiClient selectHeaderContentType:@[@"application/json"]];
-
-    // Authentication setting
-    NSArray *authSettings = @[@"Authorization"];
-
-    id bodyParam = nil;
-    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *files = [[NSMutableDictionary alloc] init];
-    
-    bodyParam = taskLineWriterServiceModel;
-    
-
-    
-    return [self.apiClient requestWithCompletionBlock: resourcePath
-                                               method: @"POST"
-                                           pathParams: pathParams
-                                          queryParams: queryParams
-                                           formParams: formParams
-                                                files: files
-                                                 body: bodyParam
-                                         headerParams: headerParams
-                                         authSettings: authSettings
-                                   requestContentType: requestContentType
-                                  responseContentType: responseContentType
-                                         responseType: @"SWGTaskLineReaderServiceModel*"
-                                      completionBlock: ^(id data, NSError *error) {
-                  
-                  completionBlock((SWGTaskLineReaderServiceModel*)data, error);
-              }
-          ];
-}
 
 ///
 /// 
